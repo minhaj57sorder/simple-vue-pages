@@ -18,7 +18,7 @@ export default {
       navitems:[
         {name:"Home",link:'/'},
         {name:"Dashbord",link:'/dashbord'},
-        {name:"About",link:'/About'},
+        {name:"About",link:'/about'},
       ]
     }
   },
