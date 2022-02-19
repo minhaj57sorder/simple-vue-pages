@@ -1,6 +1,8 @@
 <template>
   <Header />
+  <div class="container">
    <router-view></router-view>
+  </div>
   <div class="footer"> <p>copywrite &copy; 2022 </p></div>
 </template>
 
@@ -11,6 +13,8 @@ export default {
   name: 'App',
   components: {
     Header
+  },
+  methods:{
   }
 }
 </script>
@@ -28,9 +32,11 @@ body{
   -moz-osx-font-smoothing: grayscale;
   /* text-align: center; */
   color: #2c3e50;
-  overflow: hidden;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
+}
+.container{
+  padding-bottom: 15px;
 }
 .footer{
   position: absolute;

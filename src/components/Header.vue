@@ -2,7 +2,7 @@
   <div class="nav-header">
     <ul>
       <li v-for="navitem in navitems" :key="navitem.name">
-        <router-link :to="navitem.link">
+        <router-link class="btn" :to="navitem.link">
           {{navitem.name}}
         </router-link>
       </li>
@@ -21,6 +21,8 @@ export default {
         {name:"About",link:'/about'},
       ]
     }
+  },
+  methods:{
   },
   created(){}
 }
@@ -43,6 +45,9 @@ ul{
   flex-direction: row;
 }
 ul li{
+  padding: 15px 0px;
+}
+ul li .btn{
   padding: 15px;
 }
 ul li a{
@@ -50,10 +55,13 @@ ul li a{
   color: white;
   /* width: max-content; */
 }
-li:hover{
+li .btn:hover{
   background-color: #34475a;
 }
-li:active{
+li .btn:active{
   background-color: #48617a;
+}
+li .router-link-active{
+  color: #bee0ff;
 }
 </style>
